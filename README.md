@@ -2,12 +2,13 @@
 
 ## Overview
 
-**AWS Microservices Orchestrator** is a serverless microservices architecture built using AWS Cloud Development Kit (CDK) in TypeScript. This project demonstrates the use of AWS Lambda, SNS, SQS, and CloudWatch for creating an event-driven system with multiple consumers and a single producer. It also showcases advanced features such as SNS message filtering to route messages to the appropriate SQS queues and consumer Lambdas.
+**AWS Microservices Orchestrator** is a serverless microservices architecture built using AWS Cloud Development Kit (CDK) in TypeScript. This project demonstrates the use of AWS Lambda, SNS, SQS, and CloudWatch for creating an event-driven system with multiple consumers and a single producer. It also showcases advanced features such as SNS message filtering and subscriptions to route messages to the appropriate SQS queues and consumer Lambdas.
 
 ## Architecture
 
 - **SNS Topic**: Acts as the message broker with filtering policies.
 - **SQS Queues**: Three separate queues for different message types.
+- **SNS Subscriptions**: Subscriptions are set up with filters to ensure messages are routed to the correct SQS queues based on message attributes.
 - **Lambda Functions**:
   - **Producer Lambda**: Publishes messages to the SNS topic.
   - **Consumer Lambdas**: Process messages from their respective SQS queues.
