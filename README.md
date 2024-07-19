@@ -26,7 +26,7 @@
 1. Clone the repository:
 
    ```sh
-   git clone https://github.com/your-repo/aws-microservices-orchestrator.git
+   git clone https://github.com/starfrogsplash/aws-microservices-orchestrator.git
    cd aws-microservices-orchestrator
    ```
 
